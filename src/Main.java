@@ -50,6 +50,7 @@ public class Main {
 //        System.out.println("Task 11");
 //        System.out.println(reverseString("Siandien labai grazi diena"));
 
+        System.out.println("hello");
 
     }
 
