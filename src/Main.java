@@ -18,22 +18,22 @@ public class Main {
 //    return (simPi());
 //    }
 
-
-        System.out.println("Task 1");
-        sum(2, 3);
-
-        System.out.println("Task 2");
-        System.out.println(PISq());
-
-        System.out.println("Task 3");
-        System.out.println(multiply(5, 10));
-
-        System.out.println("Task 4");
-        int[] nums = {10, 15, 20};
-        printArray(nums);
-
-        System.out.println("Task 5");
-        System.out.println(rndNum(5, 10));
+//
+//        System.out.println("Task 1");
+//        sum(2, 3);
+//
+//        System.out.println("Task 2");
+//        System.out.println(PISq());
+//
+//        System.out.println("Task 3");
+//        System.out.println(multiply(5, 10));
+//
+//        System.out.println("Task 4");
+//        int[] nums = {10, 15, 20};
+//        printArray(nums);
+//
+//        System.out.println("Task 5");
+//        System.out.println(rndNum(5, 10));
 
         System.out.println("Task 6");
         int[] numbersArr = generateRndIntArr(1, 10, 5);
@@ -44,15 +44,14 @@ public class Main {
         System.out.println(result);
 
         System.out.println("Task 8");
-        int result2 = arrAverage(numbersArr);
+        double result2 = arrAverage(numbersArr);
         System.out.println(result2);
-
 
         System.out.println("Task 9");
         rectangle(4, 7);
 
-//        System.out.println("Task 10");
-//        sentenceCount("Siandien labai grazi diena");
+        System.out.println("Task 10");
+        sentenceCount("Siandien labai grazi ir sauleta diena");
 
 //        System.out.println("Task 11");
 //        System.out.println(reverseString("Siandien labai grazi diena"));
@@ -113,17 +112,13 @@ public class Main {
     }
 
     // 8 Sukurkite Funkciją kuri priimtų 6tos užduoties masyvą ir gražintų jos skaičių vidurkį (double).
-    public static int arrAverage(int[] numbersArr) {
+    public static double arrAverage(int[] numbersArr) {
         double sum = 0;
-        int count = 0;
         for (int i = 0; i < numbersArr.length; i++) {
             sum += numbersArr[i];
-            count++;
-            double average = sum / count;
         }
-        return av;
+        return sum / numbersArr.length;
     }
-
 
     // 9 Sukurkite Funkciją kuri priimtų du int skaičius ir atspausdintų stačiakampį užpildytą žvaigždutėmis. Pirmas int - išoriniam ciklui, antras vidiniam.
     public static void rectangle(int rows, int collums) {
@@ -135,16 +130,28 @@ public class Main {
         }
     }
 
-    // 10 Sukurkite Funkciją kuri priimtų sakinį kaip kintamąjį ir atspausdintų kiek jame yra raidžių ir tarpų. Sakinys - “Šiandien labai graži diena”. (kodas turi veikti padavus bet kokį sakinį)
+        // 10 Sukurkite Funkciją kuri priimtų sakinį kaip kintamąjį ir atspausdintų kiek jame yra raidžių ir tarpų. Sakinys - “Šiandien labai graži diena”. (kodas turi veikti padavus bet kokį sakinį)
 
-    public static void sentenceCount(String[] sentence) {
-        for (int i = 0; i < sentence.length; i++) {
-            System.out.println("Letters: " + sentence[i].length());
+        public static void sentenceCount (String sentence){
+        String stringStentence = "" + sentence;
+        int count = 0;
+        int count2 = 0;
+            for (int i = 0; i < stringStentence.length(); i++) {
+                if (stringStentence.charAt(i) != ' ' ){
+                    count++;
+                }
+                else{
+                    count2++;
+                }
+            }
+            System.out.println(sentence.length());
+            System.out.println("Number of letters: " + count);
+            System.out.println("Number of space: " + count2);
         }
 
-        // 11 Sukurkite Funkciją kuri priimtų sakinį, jį užkoduotų ir grąžintų. Kodavimas - sakinį apsukame iš kitos pusės. Pvz “Naglis” turi gautis “silgaN”.
 
-    }
+
+
 
 
 //    // 11 Sukurkite Funkciją kuri priimtų sakinį, jį užkoduotų ir grąžintų. Kodavimas - sakinį apsukame iš kitos pusės. Pvz “Naglis” turi gautis “silgaN”.
@@ -159,7 +166,8 @@ public class Main {
 //    }
 
 
-    //   int[] random = new int[length];
+        //   int[] random = new int[length];
+
 
 
 }
