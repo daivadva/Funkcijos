@@ -36,9 +36,16 @@ public class Main {
         System.out.println(rndNum(5, 10));
 
         System.out.println("Task 6");
-        int[] numbersArr = generateRndIntArr(10, 30, 5);
+        int[] numbersArr = generateRndIntArr(1, 10, 5);
         printArray(numbersArr);
 
+        System.out.println("Task 7");
+        int result = arrSum(numbersArr);
+        System.out.println(result);
+
+        System.out.println("Task 8");
+        int result2 = arrAverage(numbersArr);
+        System.out.println(result2);
 
 
         System.out.println("Task 9");
@@ -50,14 +57,13 @@ public class Main {
 //        System.out.println("Task 11");
 //        System.out.println(reverseString("Siandien labai grazi diena"));
 
-        System.out.println("hello");
 
     }
 
 
-
     // 1 Sukurkite Funkciją kuri priima du int tipo kintamuosius. Juos susumuoja ir atspausdina.
     public static void sum(int a, int b) {
+
         System.out.println(a + b);
     }
 
@@ -91,16 +97,32 @@ public class Main {
     public static int[] generateRndIntArr(int min, int max, int length) {
         int[] randomArr = new int[length];
         for (int i = 0; i < length; i++) {
-            randomArr[i] =  min + (int) Math.round(Math.random() * (max - min));
+            randomArr[i] = min + (int) Math.round(Math.random() * (max - min));
         }
         return randomArr;
     }
 
     // 7 Sukurkite Funkciją kuri panaudotų 6tos užduoties masyvą (priimtų kaip kintamąjį), susumuotų ir gražintų reikšmę.
 
+    public static int arrSum(int[] numbersArr) {
+        int sum = 0;
+        for (int i = 0; i < numbersArr.length; i++) {
+            sum += numbersArr[i];
+        }
+        return sum;
+    }
 
-
-    // 8
+    // 8 Sukurkite Funkciją kuri priimtų 6tos užduoties masyvą ir gražintų jos skaičių vidurkį (double).
+    public static int arrAverage(int[] numbersArr) {
+        double sum = 0;
+        int count = 0;
+        for (int i = 0; i < numbersArr.length; i++) {
+            sum += numbersArr[i];
+            count++;
+            double average = sum / count;
+        }
+        return av;
+    }
 
 
     // 9 Sukurkite Funkciją kuri priimtų du int skaičius ir atspausdintų stačiakampį užpildytą žvaigždutėmis. Pirmas int - išoriniam ciklui, antras vidiniam.
@@ -125,33 +147,6 @@ public class Main {
     }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //    // 11 Sukurkite Funkciją kuri priimtų sakinį, jį užkoduotų ir grąžintų. Kodavimas - sakinį apsukame iš kitos pusės. Pvz “Naglis” turi gautis “silgaN”.
 //
 //    public static String reverseString (String sentence2){
@@ -165,27 +160,6 @@ public class Main {
 
 
     //   int[] random = new int[length];
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }
