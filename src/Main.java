@@ -19,8 +19,8 @@ public class Main {
 //    }
 
 //
-//        System.out.println("Task 1");
-//        sum(2, 3);
+        System.out.println("Task 1");
+        sum(2, 3);
 //
 //        System.out.println("Task 2");
 //        System.out.println(PISq());
@@ -53,8 +53,8 @@ public class Main {
         System.out.println("Task 10");
         sentenceCount("Siandien labai grazi ir sauleta diena");
 
-//        System.out.println("Task 11");
-//        System.out.println(reverseString("Siandien labai grazi diena"));
+        System.out.println("Task 11");
+        System.out.println(reverseString("Siltas vasaros vakaras"));
 
 
     }
@@ -62,8 +62,8 @@ public class Main {
 
     // 1 Sukurkite Funkciją kuri priima du int tipo kintamuosius. Juos susumuoja ir atspausdina.
     public static void sum(int a, int b) {
-
-        System.out.println(a + b);
+        int plus = a+b;
+        System.out.println(plus);
     }
 
     // 2 Sukurkite Funkciją kuri vadinasi PISq. Funkcija gražina double tipo reikšmę. Reikšmė yra : 9.8596; Gautą reikšmę atspausdinkite.
@@ -130,44 +130,34 @@ public class Main {
         }
     }
 
-        // 10 Sukurkite Funkciją kuri priimtų sakinį kaip kintamąjį ir atspausdintų kiek jame yra raidžių ir tarpų. Sakinys - “Šiandien labai graži diena”. (kodas turi veikti padavus bet kokį sakinį)
+    // 10 Sukurkite Funkciją kuri priimtų sakinį kaip kintamąjį ir atspausdintų kiek jame yra raidžių ir tarpų. Sakinys - “Šiandien labai graži diena”. (kodas turi veikti padavus bet kokį sakinį)
 
-        public static void sentenceCount (String sentence){
+    public static void sentenceCount(String sentence) {
         String stringStentence = "" + sentence;
         int count = 0;
         int count2 = 0;
-            for (int i = 0; i < stringStentence.length(); i++) {
-                if (stringStentence.charAt(i) != ' ' ){
-                    count++;
-                }
-                else{
-                    count2++;
-                }
+        for (int i = 0; i < stringStentence.length(); i++) {
+            if (stringStentence.charAt(i) != ' ') {
+                count++;
+            } else {
+                count2++;
             }
-            System.out.println(sentence.length());
-            System.out.println("Number of letters: " + count);
-            System.out.println("Number of space: " + count2);
         }
-
-
-
-
-
+        System.out.println(sentence.length());
+        System.out.println("Number of letters: " + count);
+        System.out.println("Number of space: " + count2);
+    }
 
 //    // 11 Sukurkite Funkciją kuri priimtų sakinį, jį užkoduotų ir grąžintų. Kodavimas - sakinį apsukame iš kitos pusės. Pvz “Naglis” turi gautis “silgaN”.
-//
-//    public static String reverseString (String sentence2){
-//        char ch[] = sentence2.toCharArray();
-//        String reverse = "";
-//        for (int i = ch.length-1; i >=0 ; i--) {
-//            reverse+= ch[i];
-//        }
-//        return reverse;
-//    }
 
-
-        //   int[] random = new int[length];
-
+    public static String reverseString(String sentence2) {
+        char[] ch = sentence2.toCharArray();
+        String reverse = "";
+        for (int i = ch.length - 1; i >= 0; i--) {
+            reverse += ch[i];
+        }
+        return reverse;
+   }
 
 
 }
