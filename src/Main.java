@@ -18,9 +18,9 @@ public class Main {
 //    return (simPi());
 //    }
 
-//
-        System.out.println("Task 1");
-        sum(2, 3);
+////
+//        System.out.println("Task 1");
+//        sum(2, 3);
 //
 //        System.out.println("Task 2");
 //        System.out.println(PISq());
@@ -56,13 +56,21 @@ public class Main {
         System.out.println("Task 11");
         System.out.println(reverseString("Siltas vasaros vakaras"));
 
+        System.out.println("Task 2.1");
+        text("namas");
+        text("stogas");
+
+        System.out.println("Task 2.2");
+        System.out.print(rndStr(10));
+
+
 
     }
 
 
     // 1 Sukurkite Funkciją kuri priima du int tipo kintamuosius. Juos susumuoja ir atspausdina.
     public static void sum(int a, int b) {
-        int plus = a+b;
+        int plus = a + b;
         System.out.println(plus);
     }
 
@@ -133,11 +141,11 @@ public class Main {
     // 10 Sukurkite Funkciją kuri priimtų sakinį kaip kintamąjį ir atspausdintų kiek jame yra raidžių ir tarpų. Sakinys - “Šiandien labai graži diena”. (kodas turi veikti padavus bet kokį sakinį)
 
     public static void sentenceCount(String sentence) {
-        String stringStentence = "" + sentence;
+        String stringSentence = "" + sentence;
         int count = 0;
         int count2 = 0;
-        for (int i = 0; i < stringStentence.length(); i++) {
-            if (stringStentence.charAt(i) != ' ') {
+        for (int i = 0; i < stringSentence.length(); i++) {
+            if (stringSentence.charAt(i) != ' ') {
                 count++;
             } else {
                 count2++;
@@ -148,6 +156,7 @@ public class Main {
         System.out.println("Number of space: " + count2);
     }
 
+
 //    // 11 Sukurkite Funkciją kuri priimtų sakinį, jį užkoduotų ir grąžintų. Kodavimas - sakinį apsukame iš kitos pusės. Pvz “Naglis” turi gautis “silgaN”.
 
     public static String reverseString(String sentence2) {
@@ -157,7 +166,46 @@ public class Main {
             reverse += ch[i];
         }
         return reverse;
-   }
+    }
+
+
+    // SUNKESNI
+    //2.1 Parašykite funkciją, kurios argumentas būtų tekstas, kuris būtų atspausdinamas konsolėje pridedant “---” pradžioje ir gale. PVZ (---labas---)
+
+    public static void text(String word) {
+        System.out.println("---" + word + "---");
+    }
+
+    //2.2 Sugeneruokite atsitiktinį stringą iš raidžių ir skaičių (10 simbolių). Atspausdinkite simbolius stulpeliu. Jei tai skaičius apgaubkite “ [ 7 ]”. Jei skaičiai eina keli iš eilės, apgaubkite juos kartu. [75].
+    public static String rndStr (int len) {
+        String alphabet = "abcdifghijklmnopqrstyvwxz01234567890123456789";
+        String newStr = "";
+        for (int i = 0; i < len; i++) {
+        newStr += alphabet.charAt((int) (Math.random() * alphabet.length()));
+        }
+        return newStr;
+}
+
+    //2.3  Parašykite funkciją, kuri skaičiuotų, ir gražintų iš kiek sveikų skaičių jos argumentas dalijasi be liekanos (išskyrus vienetą ir patį save).
+
+    public static int divide(int a){
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 }
