@@ -61,8 +61,10 @@ public class Main {
         text("stogas");
 
         System.out.println("Task 2.2");
-        System.out.print(rndStr(10));
-
+//        System.out.println(rndStr(10));
+        String random = rndStr(10);
+        System.out.println(random);
+        dublisDu(random);
 
 
     }
@@ -177,35 +179,42 @@ public class Main {
     }
 
     //2.2 Sugeneruokite atsitiktinį stringą iš raidžių ir skaičių (10 simbolių). Atspausdinkite simbolius stulpeliu. Jei tai skaičius apgaubkite “ [ 7 ]”. Jei skaičiai eina keli iš eilės, apgaubkite juos kartu. [75].
-    public static String rndStr (int len) {
+    public static String rndStr(int len) {
         String alphabet = "abcdifghijklmnopqrstyvwxz01234567890123456789";
         String newStr = "";
         for (int i = 0; i < len; i++) {
-        newStr += alphabet.charAt((int) (Math.random() * alphabet.length()));
+            newStr += alphabet.charAt((int) (Math.random() * alphabet.length()));
         }
         return newStr;
-}
+    }
 
-    //2.3  Parašykite funkciją, kuri skaičiuotų, ir gražintų iš kiek sveikų skaičių jos argumentas dalijasi be liekanos (išskyrus vienetą ir patį save).
+    public static void dublisDu(String rndStr) {
 
-    public static int divide(int a){
+        for (int i = 0; i < rndStr.length(); i++) {
+            int count = rndStr.charAt(i);
+            if (Character.isDigit(rndStr.charAt(i))) {
+                count++;
+                System.out.println("[" + rndStr.charAt(i) + "]");
+            }
+            else {
+                System.out.println(rndStr.charAt(i));
+            }
+
+        }
 
     }
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+//    //2.3  Parašykite funkciją, kuri skaičiuotų, ir gražintų iš kiek sveikų skaičių jos argumentas dalijasi be liekanos (išskyrus vienetą ir patį save).
+//
+//    public static int divide(int a) {
+//        int count = 0;
+//    if (a % count ==0){
+//        count++;
+//    }
+//    return count;
+//    }
 
 
 }
