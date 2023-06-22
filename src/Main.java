@@ -189,32 +189,22 @@ public class Main {
     }
 
     public static void dublisDu(String rndStr) {
-
+        String nums = "";
         for (int i = 0; i < rndStr.length(); i++) {
-            int count = rndStr.charAt(i);
             if (Character.isDigit(rndStr.charAt(i))) {
-                count++;
-                System.out.println("[" + rndStr.charAt(i) + "]");
-            }
-            else {
+                nums += rndStr.charAt(i); // sioje dalyje nereikia saut, ji kelias po else if
+            } else {
+                if (nums.length() != 0) {
+                    System.out.println("[" + nums + "]"); //cia pasakome, kad jeigu randa raide, tik tuomet skaicius spausdiname ir toliau sukame cikla
+                    nums = "";
+                }
                 System.out.println(rndStr.charAt(i));
             }
-
         }
-
+        if (nums.length() != 0) { //dar karta if daromas, nes jeigu paskutinis stringo elementas ar keli elementai galimai buvo skaiciai, ju kitaip neatspausdins. Cia funkcijos "paklausiam: o gal dar yra uzsilikusiu skaiciu"
+            System.out.println("[" + nums + "]");
+        }
     }
-
-
-
-//    //2.3  Parašykite funkciją, kuri skaičiuotų, ir gražintų iš kiek sveikų skaičių jos argumentas dalijasi be liekanos (išskyrus vienetą ir patį save).
-//
-//    public static int divide(int a) {
-//        int count = 0;
-//    if (a % count ==0){
-//        count++;
-//    }
-//    return count;
-//    }
 
 
 }
